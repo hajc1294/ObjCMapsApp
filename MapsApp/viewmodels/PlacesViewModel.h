@@ -16,6 +16,7 @@
 
 - (void) autocompletePlacesRequest: (NSString *) input;
 - (void) autocompletePlacesRealm;
+- (void) clearHistoryRealm;
 - (void) placeDetailRequest: (NSString *) placeId;
 - (id) elementAt: (NSUInteger) index;
 - (PlaceDetail *) getPlaceDetail;
@@ -23,6 +24,7 @@
 - (NSArray *) getPredictions;
 - (NSInteger) dataSize;
 - (BOOL) isEmpty;
+- (BOOL) showClearHistory;
 - (void) clear;
 
 @end

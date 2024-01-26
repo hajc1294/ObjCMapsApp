@@ -35,6 +35,7 @@
 		2FF615342B5C8EB0003BAD21 /* PlaceDetail.m in Sources */ = {isa = PBXBuildFile; fileRef = 2FF615332B5C8EB0003BAD21 /* PlaceDetail.m */; };
 		2FF615372B5C8F23003BAD21 /* PlaceGeometry.m in Sources */ = {isa = PBXBuildFile; fileRef = 2FF615362B5C8F23003BAD21 /* PlaceGeometry.m */; };
 		2FF6153A2B5C8F3E003BAD21 /* PlaceLocation.m in Sources */ = {isa = PBXBuildFile; fileRef = 2FF615392B5C8F3E003BAD21 /* PlaceLocation.m */; };
+		2FFF8C852B641085004F3EBF /* AutocompleteHeaderCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 2FFF8C842B641085004F3EBF /* AutocompleteHeaderCell.m */; };
 		6ED2CB7A467C35FDCB6D6715 /* Pods_MapsApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 347371D0E3728FB78708E471 /* Pods_MapsApp.framework */; };
 /* End PBXBuildFile section */
 
@@ -94,6 +95,8 @@
 		2FF615362B5C8F23003BAD21 /* PlaceGeometry.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PlaceGeometry.m; sourceTree = "<group>"; };
 		2FF615382B5C8F32003BAD21 /* PlaceLocation.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PlaceLocation.h; sourceTree = "<group>"; };
 		2FF615392B5C8F3E003BAD21 /* PlaceLocation.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PlaceLocation.m; sourceTree = "<group>"; };
+		2FFF8C832B641078004F3EBF /* AutocompleteHeaderCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AutocompleteHeaderCell.h; sourceTree = "<group>"; };
+		2FFF8C842B641085004F3EBF /* AutocompleteHeaderCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AutocompleteHeaderCell.m; sourceTree = "<group>"; };
 		347371D0E3728FB78708E471 /* Pods_MapsApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MapsApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		5FB3668D5F591CF93D2F0F52 /* Pods-MapsApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MapsApp.debug.xcconfig"; path = "Target Support Files/Pods-MapsApp/Pods-MapsApp.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -231,6 +234,8 @@
 		2FA431FD2B5B17B20029D6D9 /* cells */ = {
 			isa = PBXGroup;
 			children = (
+				2FFF8C832B641078004F3EBF /* AutocompleteHeaderCell.h */,
+				2FFF8C842B641085004F3EBF /* AutocompleteHeaderCell.m */,
 				2FA431FE2B5B17D50029D6D9 /* AutocompletePlaceViewCell.h */,
 				2FA431FF2B5B17DF0029D6D9 /* AutocompletePlaceViewCell.m */,
 			);
@@ -437,6 +442,7 @@
 				2FA432122B5B45020029D6D9 /* AutocompleteResponse.m in Sources */,
 				2FF6153A2B5C8F3E003BAD21 /* PlaceLocation.m in Sources */,
 				2F5D51172B5ACEAA00F8EAD0 /* main.m in Sources */,
+				2FFF8C852B641085004F3EBF /* AutocompleteHeaderCell.m in Sources */,
 				2FF615342B5C8EB0003BAD21 /* PlaceDetail.m in Sources */,
 				2FF6152E2B5C8C63003BAD21 /* DirectionViewModel.m in Sources */,
 				2FF5CA942B5EBBF400948A1C /* DirectionLegs.m in Sources */,

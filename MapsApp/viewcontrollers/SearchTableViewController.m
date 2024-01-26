@@ -6,11 +6,12 @@
 //
 
 #import "SearchTableViewController.h"
+#import "AutocompleteHeaderCell.h"
 #import "AutocompletePlaceViewCell.h"
 #import "PlacesViewModel.h"
 #import "MBProgressHUD.h"
 
-@interface SearchTableViewController()
+@interface SearchTableViewController() <ClearProtocol>
 
 @property (nonatomic, weak) IBOutlet UITextField *searchTextField;
 @property (nonatomic, strong) MBProgressHUD *loadingHud;
@@ -32,6 +33,9 @@
     
     [self subscribeSignals];
     [self initUI];
+}
+
+- (void) viewWillAppear: (BOOL) animated {
     [self.placesViewModel autocompletePlacesRealm];
 }
 
@@ -90,11 +94,21 @@
     });
 }
 
+- (UIView *) tableView: (UITableView *) tableView viewForHeaderInSection: (NSInteger) section {
+    AutocompleteHeaderCell *autocompleteHeaderCell = (AutocompleteHeaderCell *) [tableView dequeueReusableCellWithIdentifier: @"AutocompleteHeaderCell"];
+    [autocompleteHeaderCell setUp: self];
+    return autocompleteHeaderCell;
+}
+
+- (CGFloat) tableView: (UITableView *) tableView heightForHeaderInSection: (NSInteger) section {
+    return [self.placesViewModel showClearHistory] ? 35 : 0;
+}
+
 - (UITableViewCell *) tableView: (UITableView *) tableView cellForRowAtIndexPath: (NSIndexPath *) indexPath {
     if ([self.placesViewModel isEmpty]) {
         return [tableView dequeueReusableCellWithIdentifier: @"EmptyViewCell" forIndexPath: indexPath];
     } else {
-        AutocompletePlaceViewCell *autocompletePlaceViewCell = [tableView dequeueReusableCellWithIdentifier: @"AutocompletePlaceViewCell" forIndexPath: indexPath];
+        AutocompletePlaceViewCell *autocompletePlaceViewCell = (AutocompletePlaceViewCell *) [tableView dequeueReusableCellWithIdentifier: @"AutocompletePlaceViewCell" forIndexPath: indexPath];
         [autocompletePlaceViewCell setUp: [self.placesViewModel elementAt: indexPath.row] isFirst: indexPath.row == 0 isLast: indexPath.row == [self.placesViewModel dataSize] - 1];
         return autocompletePlaceViewCell;
     }
@@ -112,6 +126,10 @@
     self.loadingHud = [MBProgressHUD showHUDAddedTo: self.view animated: YES];
     NSString *placeId = [self.placesViewModel placeIdFor: indexPath.row];
     [self.placesViewModel placeDetailRequest: placeId];
+}
+
+- (void) clearCallback {
+    [self.placesViewModel clearHistoryRealm];
 }
 
 - (IBAction) dismissAction: (id) sender {

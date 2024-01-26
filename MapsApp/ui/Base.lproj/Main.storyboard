@@ -398,8 +398,46 @@
                             </constraints>
                         </view>
                         <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="AutocompleteHeaderCell" rowHeight="35" id="wsa-86-niA" customClass="AutocompleteHeaderCell">
+                                <rect key="frame" x="0.0" y="155.33333206176758" width="393" height="35"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="wsa-86-niA" id="PKY-8C-n0k">
+                                    <rect key="frame" x="0.0" y="0.0" width="393" height="35"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="eAK-0G-isH">
+                                            <rect key="frame" x="281" y="0.0" width="82" height="35"/>
+                                            <subviews>
+                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vkt-QL-fwX">
+                                                    <rect key="frame" x="0.0" y="0.0" width="82" height="35"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="35" id="t57-Ns-qPg"/>
+                                                    </constraints>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                    <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                                    <state key="normal" title="Clear history">
+                                                        <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    </state>
+                                                    <connections>
+                                                        <action selector="clearAction:" destination="wsa-86-niA" eventType="touchUpInside" id="xuR-mH-jFK"/>
+                                                    </connections>
+                                                </button>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstAttribute="height" constant="35" id="jVz-1g-89H"/>
+                                                <constraint firstAttribute="width" constant="82" id="nVo-Kc-7h5"/>
+                                            </constraints>
+                                        </stackView>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstItem="eAK-0G-isH" firstAttribute="centerY" secondItem="PKY-8C-n0k" secondAttribute="centerY" id="XNy-6Y-H5w"/>
+                                        <constraint firstAttribute="trailing" secondItem="eAK-0G-isH" secondAttribute="trailing" constant="30" id="zv0-LW-clS"/>
+                                    </constraints>
+                                </tableViewCellContentView>
+                                <color key="backgroundColor" red="0.12549019610000001" green="0.1764705882" blue="0.25098039220000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </tableViewCell>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="AutocompletePlaceViewCell" rowHeight="70" id="YTA-eB-quo" customClass="AutocompletePlaceViewCell">
-                                <rect key="frame" x="0.0" y="155.33333206176758" width="393" height="70"/>
+                                <rect key="frame" x="0.0" y="190.33333206176758" width="393" height="70"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="YTA-eB-quo" id="es9-8S-LeW">
                                     <rect key="frame" x="0.0" y="0.0" width="393" height="70"/>
@@ -515,7 +553,7 @@
                                 </connections>
                             </tableViewCell>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="EmptyViewCell" rowHeight="400" id="E5m-Lv-4OP">
-                                <rect key="frame" x="0.0" y="225.33333206176758" width="393" height="400"/>
+                                <rect key="frame" x="0.0" y="260.33333206176758" width="393" height="400"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="E5m-Lv-4OP" id="EBi-DU-tzu">
                                     <rect key="frame" x="0.0" y="0.0" width="393" height="400"/>
@@ -553,13 +591,13 @@
     <resources>
         <image name="arrow.up.forward" catalog="system" width="128" height="112"/>
         <image name="chevron.left" catalog="system" width="97" height="128"/>
-        <image name="location.fill" catalog="system" width="128" height="119"/>
-        <image name="magnifyingglass" catalog="system" width="128" height="117"/>
+        <image name="location.fill" catalog="system" width="32" height="32"/>
+        <image name="magnifyingglass" catalog="system" width="32" height="32"/>
         <image name="map.fill" catalog="system" width="128" height="110"/>
         <image name="mappin.circle.fill" catalog="system" width="128" height="123"/>
         <image name="start_background" width="3584" height="5376"/>
         <image name="timer.circle.fill" catalog="system" width="128" height="123"/>
-        <image name="xmark" catalog="system" width="128" height="113"/>
+        <image name="xmark" catalog="system" width="32" height="32"/>
         <namedColor name="AccentColor">
             <color red="0.0" green="0.46000000000000002" blue="0.89000000000000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>

@@ -18,5 +18,4 @@
 
 @property (nonatomic, weak) id<SearchProtocol> searchProtocol;
 
-
 @end

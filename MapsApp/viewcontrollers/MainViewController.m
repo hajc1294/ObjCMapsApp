@@ -114,8 +114,6 @@
         self.mapView.mapStyle = style;
     }
 
-//    [self.mapView.settings setCompassButton: YES];
-//    [self.mapView.settings setMyLocationButton: YES];
     [self.mapView setMyLocationEnabled: YES];
     [self.mapView setDelegate: self];
     [self.mapViewContainer addSubview: self.mapView];

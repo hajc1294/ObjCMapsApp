@@ -20,6 +20,7 @@
 @property (nonatomic, strong) RACSignal *autocompleteSuccess;
 @property (nonatomic, strong) RACSignal *detailSuccess;
 @property (nonatomic, strong) RACSignal *error;
+@property (nonatomic) BOOL fromHistory;
 
 @end
 
@@ -39,22 +40,28 @@
         self.autocompleteSuccess = [[RACSubject subject] setNameWithFormat: @"%@ -autocompleteSuccess", self];
         self.detailSuccess = [[RACSubject subject] setNameWithFormat: @"%@ -detailSuccess", self];
         self.error = [[RACSubject subject] setNameWithFormat: @"%@ -error", self];
+        self.fromHistory = YES;
     }
     return self;
 }
 
 - (void) autocompletePlacesRequest: (NSString *) input {
-    @weakify(self);
-    [self.serviceClient getPlaceAutocomplete: input completion: ^(NSDictionary *response, NSError *error) {
-        @strongify(self);
-        if (error == nil) {
-            AutocompleteResponse *autocompleteResponse = [MTLJSONAdapter modelOfClass: AutocompleteResponse.class fromJSONDictionary: response error: nil];
-            self.predictions = autocompleteResponse.predictions;
-            [(RACSubject *) self.autocompleteSuccess sendNext: nil];
-        } else {
-            [(RACSubject *) self.error sendNext: error];
-        }
-    }];
+    if ([input isEqual: @""]) {
+        [self autocompletePlacesRealm];
+    } else {
+        @weakify(self);
+        [self.serviceClient getPlaceAutocomplete: input completion: ^(NSDictionary *response, NSError *error) {
+            @strongify(self);
+            if (error == nil) {
+                AutocompleteResponse *autocompleteResponse = [MTLJSONAdapter modelOfClass: AutocompleteResponse.class fromJSONDictionary: response error: nil];
+                self.predictions = autocompleteResponse.predictions;
+                self.fromHistory = NO;
+                [(RACSubject *) self.autocompleteSuccess sendNext: nil];
+            } else {
+                [(RACSubject *) self.error sendNext: error];
+            }
+        }];
+    }
 }
 
 - (void) placeDetailRequest: (NSString *) placeId {
@@ -87,6 +94,15 @@
     }
     
     self.predictions = savedPredictions;
+    self.fromHistory = YES;
+    [(RACSubject *) self.autocompleteSuccess sendNext: nil];
+}
+
+- (void) clearHistoryRealm {
+    [self.realm transactionWithBlock: ^{
+        [self.realm deleteObjects: [AutocompletePlaceRealm allObjectsInRealm: self.realm]];
+    }];
+    [self clear];
     [(RACSubject *) self.autocompleteSuccess sendNext: nil];
 }
 
@@ -114,6 +130,10 @@
 
 - (BOOL) isEmpty {
     return self.predictions.count == 0;
+}
+
+- (BOOL) showClearHistory {
+    return self.fromHistory && ![self isEmpty];
 }
 
 - (void) clear {
