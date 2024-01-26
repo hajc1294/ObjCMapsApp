@@ -30,7 +30,7 @@ You need to update some Pods iOS Deployment Target to run the app properly.
 
 #### Screenshots
 
-<img src="https://github.com/hajc1294/KotlinMapsApp/assets/61942641/be78c23c-bbd3-4a35-89e6-ee9fb747d39f" width="250">   <img src="https://github.com/hajc1294/KotlinMapsApp/assets/61942641/0a5a67e2-3684-49a1-908b-91c860c31077" width="250">   <img src="https://github.com/hajc1294/KotlinMapsApp/assets/61942641/f257f7db-5537-4cd0-9299-ad7ead784264" width="250">
+
 
 #### Documentation
 
