@@ -6,4 +6,4 @@
 //
 
 #define BASE_URL @"https://maps.googleapis.com/maps/api/"
-#define API_KEY @"AIzaSyBJLNRI2q8VbXWDHjSNJV5ZbCAscsa_KLM"
+#define API_KEY @"YOUR_API_KEY"
