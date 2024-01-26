@@ -34,10 +34,11 @@
     
     self.containerView.layer.cornerRadius = (isFirst || isLast) ? 23.0 : 0;
     [self.dividerLabel setHidden: isLast];
-    if (isFirst) {
+    if (isFirst && isLast) {
+        self.containerView.layer.maskedCorners = kCALayerMinXMinYCorner | kCALayerMaxXMinYCorner | kCALayerMinXMaxYCorner | kCALayerMaxXMaxYCorner;
+    } else if (isFirst) {
         self.containerView.layer.maskedCorners = kCALayerMinXMinYCorner | kCALayerMaxXMinYCorner;
-    }
-    if (isLast) {
+    } else if (isLast) {
         self.containerView.layer.maskedCorners = kCALayerMinXMaxYCorner | kCALayerMaxXMaxYCorner;
     }
 }

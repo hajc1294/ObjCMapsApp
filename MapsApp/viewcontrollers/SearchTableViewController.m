@@ -32,6 +32,7 @@
     
     [self subscribeSignals];
     [self initUI];
+    [self.placesViewModel autocompletePlacesRealm];
 }
 
 - (void) viewWillDisappear: (BOOL) animated {
@@ -104,7 +105,7 @@
 }
 
 - (CGFloat) tableView: (UITableView *) tableView heightForRowAtIndexPath: (NSIndexPath *) indexPath {
-    return [self.placesViewModel isEmpty] ? 400 :70;
+    return [self.placesViewModel isEmpty] ? 400 : 70;
 }
 
 - (void) tableView: (UITableView *) tableView didSelectRowAtIndexPath: (NSIndexPath *) indexPath {

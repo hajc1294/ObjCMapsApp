@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		2F5752C32B61809600659CAA /* StartViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2F5752C22B61809600659CAA /* StartViewController.m */; };
+		2F5B7BCF2B633DCC006008FF /* AutocompletePlaceRealm.m in Sources */ = {isa = PBXBuildFile; fileRef = 2F5B7BCE2B633DCC006008FF /* AutocompletePlaceRealm.m */; };
 		2F5D51062B5ACEA900F8EAD0 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 2F5D51052B5ACEA900F8EAD0 /* AppDelegate.m */; };
 		2F5D51092B5ACEA900F8EAD0 /* SceneDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 2F5D51082B5ACEA900F8EAD0 /* SceneDelegate.m */; };
 		2F5D510C2B5ACEA900F8EAD0 /* MainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2F5D510B2B5ACEA900F8EAD0 /* MainViewController.m */; };
@@ -41,6 +42,8 @@
 		047F981304581F55E24CC37C /* Pods-MapsApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MapsApp.release.xcconfig"; path = "Target Support Files/Pods-MapsApp/Pods-MapsApp.release.xcconfig"; sourceTree = "<group>"; };
 		2F5752C12B61808000659CAA /* StartViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = StartViewController.h; sourceTree = "<group>"; };
 		2F5752C22B61809600659CAA /* StartViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = StartViewController.m; sourceTree = "<group>"; };
+		2F5B7BCD2B633DBE006008FF /* AutocompletePlaceRealm.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AutocompletePlaceRealm.h; sourceTree = "<group>"; };
+		2F5B7BCE2B633DCC006008FF /* AutocompletePlaceRealm.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AutocompletePlaceRealm.m; sourceTree = "<group>"; };
 		2F5D51012B5ACEA900F8EAD0 /* MapsApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MapsApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2F5D51042B5ACEA900F8EAD0 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		2F5D51052B5ACEA900F8EAD0 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -260,6 +263,8 @@
 				2FA432082B5B24CC0029D6D9 /* AutocompletePlace.m */,
 				2FA4320A2B5B24D60029D6D9 /* AutocompleteFormat.h */,
 				2FA4320B2B5B24DF0029D6D9 /* AutocompleteFormat.m */,
+				2F5B7BCD2B633DBE006008FF /* AutocompletePlaceRealm.h */,
+				2F5B7BCE2B633DCC006008FF /* AutocompletePlaceRealm.m */,
 			);
 			path = autocomplete;
 			sourceTree = "<group>";
@@ -440,6 +445,7 @@
 				2FF615312B5C8E8A003BAD21 /* PlaceResponse.m in Sources */,
 				2FF5CA9D2B5EC73100948A1C /* DirectionData.m in Sources */,
 				2F5752C32B61809600659CAA /* StartViewController.m in Sources */,
+				2F5B7BCF2B633DCC006008FF /* AutocompletePlaceRealm.m in Sources */,
 				2FA432092B5B24CC0029D6D9 /* AutocompletePlace.m in Sources */,
 				2F5D51092B5ACEA900F8EAD0 /* SceneDelegate.m in Sources */,
 				2FF5CA9A2B5EBC9A00948A1C /* DirectionPolyline.m in Sources */,

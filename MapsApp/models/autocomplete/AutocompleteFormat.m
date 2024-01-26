@@ -9,6 +9,15 @@
 
 @implementation AutocompleteFormat
 
+- (instancetype) initWithMainText: (NSString *) mainText secondaryTex: (NSString *) secondaryText {
+    self = [super init];
+    if (self) {
+        self.mainText = mainText;
+        self.secondaryText = secondaryText;
+    }
+    return self;
+}
+
 + (NSDictionary *) JSONKeyPathsByPropertyKey {
     return @{
         @"mainText": @"main_text",

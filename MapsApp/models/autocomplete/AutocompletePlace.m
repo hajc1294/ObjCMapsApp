@@ -6,8 +6,20 @@
 //
 
 #import "AutocompletePlace.h"
+#import "AutocompletePlaceRealm.h"
 
 @implementation AutocompletePlace
+
+- (instancetype) initWithRealm: (AutocompletePlaceRealm *) autocompletePlaceRealm {
+    self = [super init];
+    if (self) {
+        AutocompleteFormat *autocompleteFormat = [[AutocompleteFormat alloc] initWithMainText: autocompletePlaceRealm.mainText secondaryTex: autocompletePlaceRealm.secondaryText];
+        self.placeId = autocompletePlaceRealm.placeId;
+        self.placeDescription = autocompletePlaceRealm.placeDescription;
+        self.autocompleteFormat = autocompleteFormat;
+    }
+    return self;
+}
 
 + (NSDictionary *) JSONKeyPathsByPropertyKey {
     return @{

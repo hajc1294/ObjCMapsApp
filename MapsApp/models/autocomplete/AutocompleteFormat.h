@@ -13,4 +13,6 @@
 @property (nonatomic, copy) NSString *mainText;
 @property (nonatomic, copy) NSString *secondaryText;
 
+- (instancetype) initWithMainText: (NSString *) mainText secondaryTex: (NSString *) secondaryText;
+
 @end

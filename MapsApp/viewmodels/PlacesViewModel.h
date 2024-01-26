@@ -15,6 +15,7 @@
 @property (nonatomic, strong, readonly) RACSignal *error;
 
 - (void) autocompletePlacesRequest: (NSString *) input;
+- (void) autocompletePlacesRealm;
 - (void) placeDetailRequest: (NSString *) placeId;
 - (id) elementAt: (NSUInteger) index;
 - (PlaceDetail *) getPlaceDetail;

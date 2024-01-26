@@ -12,4 +12,5 @@ target 'MapsApp' do
   pod 'Mantle'
   pod 'ReactiveObjC'
   pod 'MBProgressHUD'
+  pod 'Realm'
 end

@@ -43,6 +43,9 @@ PODS:
   - Mantle/extobjc (2.2.0)
   - MBProgressHUD (1.2.0)
   - ReactiveObjC (3.1.1)
+  - Realm (10.46.0):
+    - Realm/Headers (= 10.46.0)
+  - Realm/Headers (10.46.0)
 
 DEPENDENCIES:
   - AFNetworking
@@ -51,6 +54,7 @@ DEPENDENCIES:
   - Mantle
   - MBProgressHUD
   - ReactiveObjC
+  - Realm
 
 SPEC REPOS:
   trunk:
@@ -60,6 +64,7 @@ SPEC REPOS:
     - Mantle
     - MBProgressHUD
     - ReactiveObjC
+    - Realm
 
 SPEC CHECKSUMS:
   AFNetworking: 3bd23d814e976cd148d7d44c3ab78017b744cd58
@@ -68,7 +73,8 @@ SPEC CHECKSUMS:
   Mantle: c5aa8794a29a022dfbbfc9799af95f477a69b62d
   MBProgressHUD: 3ee5efcc380f6a79a7cc9b363dd669c5e1ae7406
   ReactiveObjC: 011caa393aa0383245f2dcf9bf02e86b80b36040
+  Realm: 699b80d8e5fc66acafd2d530199e77781a2d69d3
 
-PODFILE CHECKSUM: 53ba91f658ec434119b6f94ef8da66b62e6efa88
+PODFILE CHECKSUM: fdea9f9e7742a76772abc99c90bb9fbefe41e96c
 
 COCOAPODS: 1.14.3

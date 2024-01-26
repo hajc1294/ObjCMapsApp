@@ -151,7 +151,7 @@
 
 - (void) addMarkerToRequestedPlace: (CLLocationCoordinate2D) coordinate {
     GMSMarker *marker = [GMSMarker markerWithPosition: coordinate];
-    marker.icon = [GMSMarker markerImageWithColor: [UIColor colorWithRed: 255.0 green: 64.0 blue: 126.0 alpha: 1.0]];
+    marker.icon = [GMSMarker markerImageWithColor: [UIColor colorWithRed: 255.0f/255.0f green: 64.0f/255.0f blue: 128.0f/255.0f alpha: 1.0f]];
     marker.map = self.mapView;
 }
 
